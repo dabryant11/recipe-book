@@ -41,3 +41,11 @@ dish_ingredients = [
 
 
 dish_ingredients.each {|dish_ingredient| DishIngredient.create(dish_ingredient)}
+
+user_dishes= [
+    {user_id: User.first.id, dish_id: Dish.first.id }
+    # {user_id: User.second.id, dish_id: Dish.second.id }
+]
+
+
+user_dishes.each {|user_dish| UserDish.create(user_dish)}

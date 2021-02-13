@@ -13,6 +13,9 @@ Rails.application.routes.draw do
 
   get "/dish_ingredients", to:"dish_ingredients#index"
   get "/dish_ingredients/:id", to:"dish_ingredients#show"
+
+  get "/user_dishes", to:"user_dishes#index"
+  get "/user_dishes/:id", to:"user_dishes#show"
   # resources :dish_ingredients
   # resources :user_dishes
   # resources :ingredients
