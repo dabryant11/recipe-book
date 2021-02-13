@@ -1,0 +1,3 @@
+class UserDishesController < ApplicationController
+   
+end
