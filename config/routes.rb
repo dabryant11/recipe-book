@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
 
   get "/dishes", to:"dishes#index"
+  post "/dishes", to:"dishes#create"
 
 
 
