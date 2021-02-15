@@ -11,7 +11,7 @@ class DishesController < ApplicationController
 
     def create 
         dish = Dish.create(dish_params)
-        render json: review
+        render json: dish 
 
     end
 
@@ -27,7 +27,7 @@ class DishesController < ApplicationController
     private 
 
     def dish_params
-        params.permit(:name, :image, :category, :food_history, :ingredients)
+        params.require(:dish).permit(:name, :image, :category, :food_history, :ingredients, :instructions)
 
     end
 end
