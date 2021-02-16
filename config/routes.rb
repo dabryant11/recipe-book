@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   get "/dishes", to:"dishes#index"
   post "/dishes", to:"dishes#create"
-
+  get "/dishes/:id", to: "dishes#show"
+  delete "/dishes/:id", to: "dishes#destroy"
+  
 
 
   get "/ingredients", to:"ingredients#index"

@@ -1,4 +1,7 @@
 class DishesController < ApplicationController
+    
+    
+    
     def index 
         dishes = Dish.all
         
@@ -22,7 +25,18 @@ class DishesController < ApplicationController
     end
 
     def show 
+        dish = Dish.find(params[:id])
+
+        render json: dish
     end
+
+    def destroy
+        dish_to_delete = Dish.find(params[:id])
+        dish_to_delete.destroy
+
+        render json: dish_to_delete
+    end
+
 
     private 
 
