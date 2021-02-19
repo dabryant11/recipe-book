@@ -54,17 +54,15 @@ dishes = [
 dishes.each {|dish| Dish.create(dish)}
 
 
-ingredients = [
-    {name: "Salt"},
-    {name: "Pepper"}
-]
+ing1 = Ingredient.create(name: "Salt")
+ing2 = Ingredient.create(name: "Pepper")
 
-ingredients.each {|ingredient| Ingredient.create(ingredient)}
+# ingredients.each {|ingredient| Ingredient.create(ingredient)}
 
 
 dish_ingredients = [
-    {dish_id: Dish.first.id, ingredient_id: Ingredient.first.id },
-    {dish_id: Dish.second.id, ingredient_id: Ingredient.second.id }
+    {dish_id: Dish.first.id, ingredient_id: ing1.id },
+    {dish_id: Dish.second.id, ingredient_id: ing2.id}
 ]
 
 
